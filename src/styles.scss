@@ -1,0 +1,57 @@
+// variables
+
+:root {
+    --default-grey: rgba(128, 128, 128, 0.3);
+}
+
+// overarching
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+// buttons
+
+.arrow {
+    width: 6.25rem;
+}
+
+// carousel
+
+#carousel {
+    div {
+        width: 9.375rem;
+        height: 9.375rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    :nth-child(1) {
+        background-color: pink;
+    }
+
+    :nth-child(2) {
+        background-color: orange;
+    }
+
+    :nth-child(3) {
+        background-color: khaki;
+    }
+
+    :nth-child(4) {
+        background-color: seagreen;
+    }
+
+    :nth-child(5) {
+        background-color: cadetblue;
+    }
+}
