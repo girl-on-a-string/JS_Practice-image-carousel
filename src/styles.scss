@@ -18,40 +18,60 @@ body {
     justify-content: space-between;
 }
 
+// 
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 // buttons
 
 .arrow {
     width: 6.25rem;
 }
 
+// header 
+
+header {
+    h1 {
+        text-align: center;
+    }
+}
+
 // carousel
 
 #carousel {
-    div {
-        width: 9.375rem;
-        height: 9.375rem;
+    #strip {
         display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
-    :nth-child(1) {
-        background-color: pink;
-    }
-
-    :nth-child(2) {
-        background-color: orange;
-    }
-
-    :nth-child(3) {
-        background-color: khaki;
-    }
-
-    :nth-child(4) {
-        background-color: seagreen;
-    }
-
-    :nth-child(5) {
-        background-color: cadetblue;
+        div {
+            width: 9.375rem;
+            height: 9.375rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        :nth-child(1) {
+            background-color: pink;
+        }
+    
+        :nth-child(2) {
+            background-color: orange;
+        }
+    
+        :nth-child(3) {
+            background-color: khaki;
+        }
+    
+        :nth-child(4) {
+            background-color: seagreen;
+        }
+    
+        :nth-child(5) {
+            background-color: cadetblue;
+        }
     }
 }
