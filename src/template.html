@@ -1,26 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Carousel</title>
-</head>
-<body>
-    <button class="arrow"></button>
+  </head>
+  <body>
+    <button class="arrow" id="prev" onclick="prev()"></button>
     <main>
-        <div id="container">
-            <header><h1>Image Carousel</h1></header>
-            <div id="carousel"> <!--frame-->
-                <div id="strip">
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                </div>
-            </div>
+      <div id="container">
+        <header><h1>Image Carousel</h1></header>
+        <div id="carousel">
+          <div id="strip">
+            <div class="slide">1</div>
+            <div class="slide">2</div>
+            <div class="slide">3</div>
+            <div class="slide">4</div>
+            <div class="slide">5</div>
+          </div>
         </div>
+        <div id="dots">
+          <div id="dot-one" class="dot"></div>
+          <div id="dot-two" class="dot"></div>
+          <div id="dot-three" class="dot"></div>
+          <div id="dot-four" class="dot"></div>
+          <div id="dot-five" class="dot"></div>
+        </div>
+      </div>
     </main>
-    <button class="arrow"></button>
-</body>
+    <button class="arrow" id="next" onclick="next()"></button>
+  </body>
 </html>
