@@ -6,28 +6,28 @@
     <title>Image Carousel</title>
   </head>
   <body>
-    <button class="arrow" id="prev" onclick="prev()"></button>
+    <button class="arrow" id="prev"></button>
     <main>
       <div id="container">
         <header><h1>Image Carousel</h1></header>
         <div id="carousel">
           <div id="strip">
-            <div class="slide">1</div>
-            <div class="slide">2</div>
-            <div class="slide">3</div>
-            <div class="slide">4</div>
-            <div class="slide">5</div>
+            <div class="slide" data-value="1">1</div>
+            <div class="slide" data-value="2">2</div>
+            <div class="slide" data-value="3">3</div>
+            <div class="slide" data-value="4">4</div>
+            <div class="slide" data-value="5">5</div>
           </div>
         </div>
         <div id="dots">
-          <div id="dot-one" class="dot"></div>
-          <div id="dot-two" class="dot"></div>
-          <div id="dot-three" class="dot"></div>
-          <div id="dot-four" class="dot"></div>
-          <div id="dot-five" class="dot"></div>
+          <div id="dot-one" class="dot" data-value="1"></div>
+          <div id="dot-two" class="dot" data-value="2"></div>
+          <div id="dot-three" class="dot" data-value="3"></div>
+          <div id="dot-four" class="dot" data-value="4"></div>
+          <div id="dot-five" class="dot" data-value="5"></div>
         </div>
       </div>
     </main>
-    <button class="arrow" id="next" onclick="next()"></button>
+    <button class="arrow" id="next"></button>
   </body>
 </html>

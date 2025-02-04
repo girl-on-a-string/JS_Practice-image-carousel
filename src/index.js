@@ -19,9 +19,11 @@ let dots = document.querySelectorAll(".dot");
 dots.forEach((dot) => {
     dot.addEventListener("click", () => {
         console.log("dot move");
-        currentSlide(dot.value);
+        currentSlide(parseInt(dot.getAttribute("data-value")));
     });
 })
+
+
 
 // for (let i = 0; i < dot.length; i++) {
 //     console.log("for dots")
