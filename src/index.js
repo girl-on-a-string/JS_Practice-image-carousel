@@ -1,70 +1,47 @@
 import "./styles.scss";
 
-function currentSlide (n) {
-    console.log(n);
+function currentSlide(n) {
+  console.log(n);
 }
-
-// const indexHandling = () => {
-//     slidesIndex++;
-
-//     if (slidesIndex > 5) {
-//         slidesIndex = 1;
-//     }
-// }
 
 // // dots
 
 let dots = document.querySelectorAll(".dot");
 
 dots.forEach((dot) => {
-    dot.addEventListener("click", () => {
-        console.log("dot move");
-        currentSlide(parseInt(dot.getAttribute("data-value")));
-    });
-})
+  dot.addEventListener("click", () => {
+    currentSlide(parseInt(dot.getAttribute("data-value")));
+  });
+});
 
+let slides = document.querySelectorAll(".slide");
 
-
-// for (let i = 0; i < dot.length; i++) {
-//     console.log("for dots")
-//     currentSlide(i);
-// }
-
-// // connect slides and dots
-
-// let slide = document.querySelectorAll(".slide");
-
-// for (let i = 0; i < slide.length; i++) {
-//     console.log("for slides")
-//     currentSlide(i);
-// }
-
-// slide.forEach(() => {
-//     indexHandling();
-//     console.log(slidesIndex);
-// })
-
+slides.forEach((slide) => {
+  slide.addEventListener("click", () => {
+    currentSlide(parseInt(slide.getAttribute("data-value")));
+  });
+});
 
 // move functions
 
-let strip = document.getElementById("strip")
+let slidesIndex = 1;
 
 const next = () => {
-
-}
+  currentSlide(slidesIndex++);
+};
 
 const prev = () => {
+  currentSlide(slidesIndex--);
+};
 
-} 
-
-// event listeners
+// arrow event listeners
 
 let nextArrow = document.getElementById("next");
 nextArrow.addEventListener("click", () => {
-
-})
+  next();
+});
 
 let prevArrow = document.getElementById("prev");
 prevArrow.addEventListener("click", () => {
-
-})
+  prev();
+});
