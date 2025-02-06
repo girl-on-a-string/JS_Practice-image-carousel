@@ -5,13 +5,20 @@ const currentSlide = (n) => { // current selected slide
     let slides = document.querySelectorAll(".slide");
     
     let i;
+
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
 
     slides[n - 1].style.display = "initial";
 
-    console.log(slides[n - 1]); 
+    dots[n - 1].classList.add("active");
+
+    for (i = 0; i < dots.length; i++) {
+        if (dots[i] !== dots[n - 1]) {
+            dots[i].classList.remove("active");
+        }
+    }
 
     // arrow event listeners
 
@@ -30,9 +37,8 @@ let dots = document.querySelectorAll(".dot");
 dots.forEach((dot) => {
     dot.addEventListener("click", () => { // for if someone chooses to click on one
         let selected = parseInt(dot.getAttribute("data-value"))
+        // dot.classList.add("active");
         currentSlide(selected);
-        console.log(selected);
     })
 
-    // for automatic affect
 })
