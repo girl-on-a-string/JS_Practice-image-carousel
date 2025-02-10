@@ -60,18 +60,22 @@ header {
 
       :nth-child(2) {
         background-color: orange;
+        display: none;
       }
 
       :nth-child(3) {
         background-color: khaki;
+        display: none;
       }
 
       :nth-child(4) {
         background-color: seagreen;
+        display: none;
       }
 
       :nth-child(5) {
         background-color: cadetblue;
+        display: none;
       }
     }
   }
@@ -88,5 +92,9 @@ header {
     width: 1.25rem;
     height: 1.25rem;
     background-color: lightgrey;
+  }
+
+  .active {
+    background-color: gray;
   }
 }
