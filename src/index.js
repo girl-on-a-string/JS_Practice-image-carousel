@@ -2,6 +2,22 @@ import "./styles.scss";
 
 let slides = document.querySelectorAll(".slide");
 
+let slidesNum = 1;
+
+const autoCycle = (n) => {
+  let cycleSec = 2000;
+
+  setInterval(() => {
+    n++;
+
+    if (n > slides.length) {
+      n = 1;
+    }
+
+    currentSlide(n);
+  }, cycleSec);
+};
+
 const currentSlide = (n) => {
   // current selected slide
   let i;
@@ -12,6 +28,7 @@ const currentSlide = (n) => {
 
   slides[n - 1].style.display = "initial";
 
+  let dots = document.querySelectorAll(".dot");
   dots[n - 1].classList.add("active");
 
   for (i = 0; i < dots.length; i++) {
@@ -22,45 +39,4 @@ const currentSlide = (n) => {
   }
 };
 
-// dots
-
-let dots = document.querySelectorAll(".dot");
-
-dots.forEach((dot) => {
-  let selected = parseInt(dot.getAttribute("data-value"));
-
-  dot.addEventListener("click", () => {
-    // for if someone chooses to click on one
-    currentSlide(selected);
-  });
-});
-
-// arrow event listeners
-
-// document.getElementById("next").addEventListener("click", () => {
-//     currentSlide();
-//     console.log(currentSlide())
-// })
-
-// document.getElementById("prev").addEventListener("click", () => {
-//     currentSlide();
-//     console.log(currentSlide())
-// })
-
-// automatic cycle
-
-const autoCycle = () => {
-  let slideNum = 0;
-
-  setInterval(() => {
-    slideNum++;
-
-    if (slideNum > slides.length) {
-      slideNum = 1;
-    }
-
-    currentSlide(slideNum);
-  }, 5000);
-};
-
-autoCycle();
+autoCycle(slidesNum);
